@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-rev/gulp-rev/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-rev/node_modules/gulp-rev/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-rev">npmtest-gulp-rev (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-rev/gulp-rev/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-rev/node_modules/gulp-rev/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">16.13% <small>(15 / 93)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-rev/gulp-rev/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-rev/node_modules/gulp-rev/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -581,118 +579,118 @@ var revPath = require('rev-path');
 var sortKeys = require('sort-keys');
 var modifyFilename = require('modify-filename');
 &nbsp;
-<span class="fstat-no" title="function not covered" >function relPath(base, filePath) {</span>
-<span class="cstat-no" title="statement not covered" >	if (filePath.indexOf(base) !== 0) {</span>
-<span class="cstat-no" title="statement not covered" >		return filePath.replace(/\\/g, '/');</span>
+<span class="fstat-no" title="function not covered">function relPath(base, filePath) {</span>
+<span class="cstat-no" title="statement not covered">	if (filePath.indexOf(base) !== 0) {</span>
+<span class="cstat-no" title="statement not covered">		return filePath.replace(/\\/g, '/');</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var newPath = filePath.substr(base.length).replace(/\\/g, '/');</span>
+<span class="cstat-no" title="statement not covered">	var newPath = filePath.substr(base.length).replace(/\\/g, '/');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (newPath[0] === '/') {</span>
-<span class="cstat-no" title="statement not covered" >		return newPath.substr(1);</span>
+<span class="cstat-no" title="statement not covered">	if (newPath[0] === '/') {</span>
+<span class="cstat-no" title="statement not covered">		return newPath.substr(1);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return newPath;</span>
+<span class="cstat-no" title="statement not covered">	return newPath;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getManifestFile(opts, cb) {</span>
-<span class="cstat-no" title="statement not covered" >	file.read(opts.path, opts, <span class="fstat-no" title="function not covered" >function (err, manifest) {</span></span>
-<span class="cstat-no" title="statement not covered" >		if (err) {</span>
+<span class="fstat-no" title="function not covered">function getManifestFile(opts, cb) {</span>
+<span class="cstat-no" title="statement not covered">	file.read(opts.path, opts, <span class="fstat-no" title="function not covered">function (err, manifest) {</span></span>
+<span class="cstat-no" title="statement not covered">		if (err) {</span>
 			// not found
-<span class="cstat-no" title="statement not covered" >			if (err.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered" >				cb(null, new gutil.File(opts));</span>
+<span class="cstat-no" title="statement not covered">			if (err.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered">				cb(null, new gutil.File(opts));</span>
 			} else {
-<span class="cstat-no" title="statement not covered" >				cb(err);</span>
+<span class="cstat-no" title="statement not covered">				cb(err);</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		cb(null, manifest);</span>
+<span class="cstat-no" title="statement not covered">		cb(null, manifest);</span>
 	});
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function transformFilename(file) {</span>
+<span class="fstat-no" title="function not covered">function transformFilename(file) {</span>
 	// save the old path for later
-<span class="cstat-no" title="statement not covered" >	file.revOrigPath = file.path;</span>
-<span class="cstat-no" title="statement not covered" >	file.revOrigBase = file.base;</span>
-<span class="cstat-no" title="statement not covered" >	file.revHash = revHash(file.contents);</span>
+<span class="cstat-no" title="statement not covered">	file.revOrigPath = file.path;</span>
+<span class="cstat-no" title="statement not covered">	file.revOrigBase = file.base;</span>
+<span class="cstat-no" title="statement not covered">	file.revHash = revHash(file.contents);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	file.path = modifyFilename(file.path, <span class="fstat-no" title="function not covered" >function (filename, extension) {</span></span>
-<span class="cstat-no" title="statement not covered" >		var extIndex = filename.indexOf('.');</span>
+<span class="cstat-no" title="statement not covered">	file.path = modifyFilename(file.path, <span class="fstat-no" title="function not covered">function (filename, extension) {</span></span>
+<span class="cstat-no" title="statement not covered">		var extIndex = filename.indexOf('.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		filename = extIndex === -1 ?</span>
+<span class="cstat-no" title="statement not covered">		filename = extIndex === -1 ?</span>
 			revPath(filename, file.revHash) :
 			revPath(filename.slice(0, extIndex), file.revHash) + filename.slice(extIndex);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return filename + extension;</span>
+<span class="cstat-no" title="statement not covered">		return filename + extension;</span>
 	});
 }
 &nbsp;
-var plugin = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >	var sourcemaps = [];</span>
-<span class="cstat-no" title="statement not covered" >	var pathMap = {};</span>
+var plugin = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">	var sourcemaps = [];</span>
+<span class="cstat-no" title="statement not covered">	var pathMap = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return through.obj(<span class="fstat-no" title="function not covered" >function (file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >		if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered" >			cb(null, file);</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">	return through.obj(<span class="fstat-no" title="function not covered">function (file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">		if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered">			cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError('gulp-rev', 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">		if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError('gulp-rev', 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
 		// this is a sourcemap, hold until the end
-<span class="cstat-no" title="statement not covered" >		if (path.extname(file.path) === '.map') {</span>
-<span class="cstat-no" title="statement not covered" >			sourcemaps.push(file);</span>
-<span class="cstat-no" title="statement not covered" >			cb();</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">		if (path.extname(file.path) === '.map') {</span>
+<span class="cstat-no" title="statement not covered">			sourcemaps.push(file);</span>
+<span class="cstat-no" title="statement not covered">			cb();</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var oldPath = file.path;</span>
-<span class="cstat-no" title="statement not covered" >		transformFilename(file);</span>
-<span class="cstat-no" title="statement not covered" >		pathMap[oldPath] = file.revHash;</span>
+<span class="cstat-no" title="statement not covered">		var oldPath = file.path;</span>
+<span class="cstat-no" title="statement not covered">		transformFilename(file);</span>
+<span class="cstat-no" title="statement not covered">		pathMap[oldPath] = file.revHash;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		cb(null, file);</span>
-	}, <span class="fstat-no" title="function not covered" >function (cb) {</span>
-<span class="cstat-no" title="statement not covered" >		sourcemaps.forEach(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
-<span class="cstat-no" title="statement not covered" >			var reverseFilename;</span>
+<span class="cstat-no" title="statement not covered">		cb(null, file);</span>
+	}, <span class="fstat-no" title="function not covered">function (cb) {</span>
+<span class="cstat-no" title="statement not covered">		sourcemaps.forEach(<span class="fstat-no" title="function not covered">function (file) {</span></span>
+<span class="cstat-no" title="statement not covered">			var reverseFilename;</span>
 &nbsp;
 			// attempt to parse the sourcemap's JSON to get the reverse filename
-<span class="cstat-no" title="statement not covered" >			try {</span>
-<span class="cstat-no" title="statement not covered" >				reverseFilename = JSON.parse(file.contents.toString()).file;</span>
+<span class="cstat-no" title="statement not covered">			try {</span>
+<span class="cstat-no" title="statement not covered">				reverseFilename = JSON.parse(file.contents.toString()).file;</span>
 			} catch (err) {}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!reverseFilename) {</span>
-<span class="cstat-no" title="statement not covered" >				reverseFilename = path.relative(path.dirname(file.path), path.basename(file.path, '.map'));</span>
+<span class="cstat-no" title="statement not covered">			if (!reverseFilename) {</span>
+<span class="cstat-no" title="statement not covered">				reverseFilename = path.relative(path.dirname(file.path), path.basename(file.path, '.map'));</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (pathMap[reverseFilename]) {</span>
+<span class="cstat-no" title="statement not covered">			if (pathMap[reverseFilename]) {</span>
 				// save the old path for later
-<span class="cstat-no" title="statement not covered" >				file.revOrigPath = file.path;</span>
-<span class="cstat-no" title="statement not covered" >				file.revOrigBase = file.base;</span>
+<span class="cstat-no" title="statement not covered">				file.revOrigPath = file.path;</span>
+<span class="cstat-no" title="statement not covered">				file.revOrigBase = file.base;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				var hash = pathMap[reverseFilename];</span>
-<span class="cstat-no" title="statement not covered" >				file.path = revPath(file.path.replace(/\.map$/, ''), hash) + '.map';</span>
+<span class="cstat-no" title="statement not covered">				var hash = pathMap[reverseFilename];</span>
+<span class="cstat-no" title="statement not covered">				file.path = revPath(file.path.replace(/\.map$/, ''), hash) + '.map';</span>
 			} else {
-<span class="cstat-no" title="statement not covered" >				transformFilename(file);</span>
+<span class="cstat-no" title="statement not covered">				transformFilename(file);</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			this.push(file);</span>
+<span class="cstat-no" title="statement not covered">			this.push(file);</span>
 		}, this);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		cb();</span>
+<span class="cstat-no" title="statement not covered">		cb();</span>
 	});
 };
 &nbsp;
-plugin.manifest = <span class="fstat-no" title="function not covered" >function (pth, opts) {</span>
-<span class="cstat-no" title="statement not covered" >	if (typeof pth === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >		pth = {path: pth};</span>
+plugin.manifest = <span class="fstat-no" title="function not covered">function (pth, opts) {</span>
+<span class="cstat-no" title="statement not covered">	if (typeof pth === 'string') {</span>
+<span class="cstat-no" title="statement not covered">		pth = {path: pth};</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	opts = objectAssign({</span>
+<span class="cstat-no" title="statement not covered">	opts = objectAssign({</span>
 		path: 'rev-manifest.json',
 		merge: false,
 		// Apply the default JSON transformer.
@@ -701,47 +699,47 @@ plugin.manifest = <span class="fstat-no" title="function not covered" >function 
 		transformer: JSON
 	}, opts, pth);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var manifest = {};</span>
+<span class="cstat-no" title="statement not covered">	var manifest = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return through.obj(<span class="fstat-no" title="function not covered" >function (file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">	return through.obj(<span class="fstat-no" title="function not covered">function (file, enc, cb) {</span></span>
 		// ignore all non-rev'd files
-<span class="cstat-no" title="statement not covered" >		if (!file.path || !file.revOrigPath) {</span>
-<span class="cstat-no" title="statement not covered" >			cb();</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">		if (!file.path || !file.revOrigPath) {</span>
+<span class="cstat-no" title="statement not covered">			cb();</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var revisionedFile = relPath(file.base, file.path);</span>
-<span class="cstat-no" title="statement not covered" >		var originalFile = path.join(path.dirname(revisionedFile), path.basename(file.revOrigPath)).replace(/\\/g, '/');</span>
+<span class="cstat-no" title="statement not covered">		var revisionedFile = relPath(file.base, file.path);</span>
+<span class="cstat-no" title="statement not covered">		var originalFile = path.join(path.dirname(revisionedFile), path.basename(file.revOrigPath)).replace(/\\/g, '/');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		manifest[originalFile] = revisionedFile;</span>
+<span class="cstat-no" title="statement not covered">		manifest[originalFile] = revisionedFile;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		cb();</span>
-	}, <span class="fstat-no" title="function not covered" >function (cb) {</span>
+<span class="cstat-no" title="statement not covered">		cb();</span>
+	}, <span class="fstat-no" title="function not covered">function (cb) {</span>
 		// no need to write a manifest file if there's nothing to manifest
-<span class="cstat-no" title="statement not covered" >		if (Object.keys(manifest).length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >			cb();</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">		if (Object.keys(manifest).length === 0) {</span>
+<span class="cstat-no" title="statement not covered">			cb();</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		getManifestFile(opts, <span class="fstat-no" title="function not covered" >function (err, manifestFile) {</span></span>
-<span class="cstat-no" title="statement not covered" >			if (err) {</span>
-<span class="cstat-no" title="statement not covered" >				cb(err);</span>
-<span class="cstat-no" title="statement not covered" >				return;</span>
+<span class="cstat-no" title="statement not covered">		getManifestFile(opts, <span class="fstat-no" title="function not covered">function (err, manifestFile) {</span></span>
+<span class="cstat-no" title="statement not covered">			if (err) {</span>
+<span class="cstat-no" title="statement not covered">				cb(err);</span>
+<span class="cstat-no" title="statement not covered">				return;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (opts.merge &amp;&amp; !manifestFile.isNull()) {</span>
-<span class="cstat-no" title="statement not covered" >				var oldManifest = {};</span>
+<span class="cstat-no" title="statement not covered">			if (opts.merge &amp;&amp; !manifestFile.isNull()) {</span>
+<span class="cstat-no" title="statement not covered">				var oldManifest = {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				try {</span>
-<span class="cstat-no" title="statement not covered" >					oldManifest = opts.transformer.parse(manifestFile.contents.toString());</span>
+<span class="cstat-no" title="statement not covered">				try {</span>
+<span class="cstat-no" title="statement not covered">					oldManifest = opts.transformer.parse(manifestFile.contents.toString());</span>
 				} catch (err) {}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				manifest = objectAssign(oldManifest, manifest);</span>
+<span class="cstat-no" title="statement not covered">				manifest = objectAssign(oldManifest, manifest);</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			manifestFile.contents = new Buffer(opts.transformer.stringify(sortKeys(manifest), null, '  '));</span>
-<span class="cstat-no" title="statement not covered" >			this.push(manifestFile);</span>
-<span class="cstat-no" title="statement not covered" >			cb();</span>
+<span class="cstat-no" title="statement not covered">			manifestFile.contents = new Buffer(opts.transformer.stringify(sortKeys(manifest), null, '  '));</span>
+<span class="cstat-no" title="statement not covered">			this.push(manifestFile);</span>
+<span class="cstat-no" title="statement not covered">			cb();</span>
 		}.bind(this));
 	});
 };
@@ -749,10 +747,11 @@ plugin.manifest = <span class="fstat-no" title="function not covered" >function 
 module.exports = plugin;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 07:37:15 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:47:11 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
