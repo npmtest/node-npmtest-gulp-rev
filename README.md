@@ -1,4 +1,7 @@
-# test coverage for  [gulp-rev (v7.1.2)](https://github.com/sindresorhus/gulp-rev#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-rev.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-rev) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-rev.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-rev)
+# npmtest-gulp-rev
+
+#### test coverage for  [gulp-rev (v7.1.2)](https://github.com/sindresorhus/gulp-rev#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-rev.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-rev) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-rev.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-rev)
+
 #### Static asset revisioning by appending content hash to filenames: unicorn.css => unicorn-d41d8cd98f.css
 
 [![NPM](https://nodei.co/npm/gulp-rev.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-rev)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-rev/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-rev/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-rev/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-rev/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-gulp-rev/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-rev/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-rev/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-gulp-rev/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-gulp-rev/build/test-report.html](https://npmtest.github.io/node-npmtest-gulp-rev/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-gulp-rev/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-gulp-rev/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-gulp-rev/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-rev/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-rev/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-rev/build/apidoc.html)
 
